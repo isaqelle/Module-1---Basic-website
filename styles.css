@@ -4,7 +4,10 @@
     --text: black;
     --links: rgb(56, 164, 200);
     --titles:rgb(24, 121, 153);
+    /* --bookBoxbg: #fff;
+    --bookBoxbglg: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(207, 207, 207, 1) 50%); */
 }
+
 
 html, body{
     margin: 0;
@@ -115,21 +118,37 @@ ul a{
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
 }
 
 .bookBox{
     border: 2px solid blue;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
     text-align: center;
-    /* object-fit: contain; */
+    padding: 10px;
+    height: 500px;
+    /* background: var(--bookBoxbg);
+    background: var(--bookBoxbglg); */
+    
+}
+
+.bookBox *{
+    margin: 0;
 }
 
 .bookBox img{
-    /* object-fit: contain; */
-    width: 150px;
+    width: 170px;
+    height: auto;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
+}
+
+.bookBox .summary{
+    font-size: 12px;
+    margin: 5px;
 }
 
 
