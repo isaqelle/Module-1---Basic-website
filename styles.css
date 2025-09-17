@@ -151,6 +151,25 @@ ul a{
     margin: 5px;
 }
 
+/* SEARCHBAR SECTION */
+.searchBarSection{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.searchBar{
+    border: 2px solid purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.searchBar input{
+    width:80%;
+}
 
 footer{
     grid-area: 3/1/4/4;
