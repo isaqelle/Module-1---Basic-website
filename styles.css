@@ -10,16 +10,27 @@
     --NAVYFADED: #3743754d;
     --MAROON:#895159;
     --PEACH: #DFAEA1;
+
+    /* 2nd COLOR PALETTE GRAY */
+    --ALBEWHITE: #E1D8CB;
+    --ALBEWHITE_FADE: #e1d8cbd8;
+    --METAL: #454545;
+    --PLACEBOWHITE: #E6E6E6;
+    --ASHLITE: #A7A39C;
+    --NEROCOLOR: #252525;
     
     /* --bookBoxbg: #fff;
     --bookBoxbglg: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(207, 207, 207, 1) 50%); */
 }
 
+/* *{
+    border: 2px solid black;
+} */
 
 html, body{
     margin: 0;
     height: 100%;
-    background-color: var(--NAVY);
+    background-color: var(--ALBEWHITE);
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -34,21 +45,24 @@ header{
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: var(--PEACH);
+    /* background-color: var(--ALBEWHITE); */
 }
 
 header h1{
-    font-size: 60px;
+    font-size: 55px;
     margin: 0;
     padding: 15px;
-    background-color: var(--NAVY);
-    color: var(--MAROON);
     text-transform: uppercase;
     font-style: italic;
+    background-color: var(--ALBEWHITE);
 }
 
 #shopText{
-    color: var(--PEACH);
+    color:var(--NEROCOLOR);
+}
+
+#bookText{
+    font-size: larger;
 }
 
 /* NAVIGATION STYLES */
@@ -57,14 +71,14 @@ nav{
     /* border: 2px solid red; */
     display: flex;
     justify-content: flex-end;
-    background-color: rgba(255, 255, 255, 0.379);
-    border-top: 2px solid var(--NAVY);
+    border-top: 2px dotted var(--NAVY);
     /* border-bottom: 2px solid var(--NAVY); */
+    background-color: var(--ALBEWHITE_FADE);
 }
 
 nav a{
-    padding: 10px;
-    color:var(--MAROON);
+    padding: 5px;
+    color:var(--NEROCOLOR);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 900;
@@ -82,13 +96,16 @@ nav a:hover{
 /* MAIN SECTION STYLES */
 main{
     grid-area: 2/2/3/3;
-    background-color: var(--CLOUD);
-    border-radius: 20px;
+    background-color: var(--PLACEBOWHITE);
+    /* border-radius: 20px; */
     margin-top: var(--space2);
 }
 
-main h2{
+main h2,
+#asideRight h2{
     margin: var(--space1);
+
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -102,15 +119,14 @@ main h2{
     /* border: 2px solid red; */
     display: flex;
     justify-content:center;
-    background-color: var(--NAVY);
+    background-color: var(--ALBEWHITE);
     margin-top: var(--space2);
 }
 
 ul{
     /* border: 2px solid orange; */
     list-style-type: none;
-    padding: 2px;
-    text-align: center;
+    padding: 1px;
     height: 270px;
     display: flex;
     flex-direction: column;
@@ -124,10 +140,10 @@ ul a{
     letter-spacing: 2px;
     transition: 0.5s ease-in-out;
     text-decoration: none;
-    color: var(--MAROON);
+    color: var(--NEROCOLOR);
     transition: 0.5s ease-in-out;
     line-height: 50px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 ul a:hover{
@@ -137,16 +153,15 @@ ul a:hover{
 }
 
 #categoriesDiv{
-    background-color: var(--PEACH);
-    margin: 10px;
-    padding: 15px;
-    position: fixed;
+    background-color:var(--ASHLITE);
+    margin: 0 auto;
+    padding: 30px;
 }
 
 /* RIGHT SIDEBAR SECTION STYLES */
 #asideRight{
     grid-area: 2/3/3/4;
-    background-color: var(--NAVY);
+    background-color: var(--ALBEWHITE);
     margin-top: var(--space2);
 }
 
@@ -192,20 +207,24 @@ ul a:hover{
 }
 
 #categoriesDiv,
-.searchBarSection {
+#searchBarSection {
   position: static;
   width: auto;
 }
 
 /* SEARCHBAR SECTION */
-.searchBarSection{
-    border: 2px solid red;
+#searchBarSection{
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    /* background-color: var(--ASHLITE); */
+    
+    padding: 10px;
     position: static;
     width: auto;
 }
+
+
 
 .searchBar{
     border: 2px solid purple;
@@ -247,6 +266,10 @@ ROWS: header      -   main    -   footer */
         gap:  0px;
     }
 
+    #asideRight{
+        position: relative;
+    }
+
     .bookGridContainer{
         grid-column: 2;
         grid-template-columns: repeat(3,1fr);
@@ -261,8 +284,15 @@ ROWS: header      -   main    -   footer */
         width: 11%;
     }
 
-    .searchBarSection{
-        position: fixed;
-        width: auto;
-    }
+
+    #searchBarSection{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: fixed;         
+    background: var(--ALBEWHITE); /* ✅ visible background */
+  
+}
+
 }
