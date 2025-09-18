@@ -3,46 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Bookshop</title>
+    <title>Bookshop</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
+    <div id="container">
     <header>
-        <h1>&lt;/Frontend Bookshop&gt;</h1>
+        <h1><span id="bookText">Book</span><span id="shopText">shop</span></h1>
         <nav>
-            <a href="">Home</a>
-            <a href="">Cart</a>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
             <a href="">Categories</a>
         </nav>
     </header>
         <aside id="asideLeft">
+            <div id="categoriesDiv">
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>UX</li>
+                <li>
+                    <a href="">Fantasy</a></li>
+                <li><a href="">Science Fiction</a></li>
+                <li><a href="">Dystopian</a></li>
+                
             </ul>
+            </div>
         </aside>
 
         <main>
-            <section>
-                <h2>Cart</h2>
-                <div id="cartGridContainer">
-                    <article>col1 book details</article>
-                    <article>col2 remove button</article>
+            <section id="mainBookGrid">
+                <h2>Cart (2)</h2>
+                <div class="bookGridContainerCart">
+                    <div id="cartContainer">
+                        <div class="cartBox">
+                            <img src="assets/1984.jpg" width="150px" alt="1984">
+                            <div class="cartBookInfo">
+                            <h3>1984</h3>
+                            <h4>George Orwell</h4>
+                            <h5><em>200kr</em></h5>
+                            </div>
+                            
+                        </div>
+                        <div class="cartRemove">Remove</div>
+
+                        <div class="cartBox">
+                            <img src="assets/i-who-have-never-known-men.jpg" width="150px" alt="I Who Have Never Known Men">
+                            <div class="cartBookInfo">
+                            <h3>I Who Have Never Known Men</h3>
+                            <h4>Jacqueline Harpman</h4>
+                            <h5><em>249kr</em></h5>
+                            </div>
+                            
+                        </div>
+                        <div class="cartRemove">Remove</div>
+                        
+                    </div>
+                  <section id="totalSection">
+                            <h3>Total price:</h3>
+                            <h4>449kr</h4>
+                        </section> 
                 </div>
-            </section>
-
-            <section id="totalPriceSection">
-
             </section>
         </main>
 
         <aside id="asideRight">
-            extra space
+            <div id="searchBarSection">
+                <h2>Search</h2>
+                <div class="searchBar">
+                    <input type="text" list="books"><img src="assets/search-alt-svgrepo-com.svg" width="20px" alt="Search icon">
+                    <datalist id="books">
+                        <option value="A Court of Thorns and Roses"></option>
+                        <option value="Iron flame"></option>
+                        <option value="Onyx storm"></option>
+                        <option value="Neuromancer"></option>
+                        <option value="Red Rising"></option>
+                        <option value="I Who Have Never Known Men"></option>
+                        <option value="The Handmainds Tale"></option>
+                        <option value="Brave new World"></option>
+                        <option value="1984"></option>
+                    </datalist>
+                </div>
+            </div>
         </aside>
 
-        <footer>Footer</footer>
+        <footer><p>© 2025 Isabelle Dahlström</p>
+        <p>isabelle.dahlstromm@gmail.com</p></footer>
+        </div>
 </body>
 </html>
