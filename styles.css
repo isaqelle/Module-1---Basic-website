@@ -63,6 +63,7 @@ header h1{
 
 #bookText{
     font-size: larger;
+    color: var(--NAVY);
 }
 
 /* NAVIGATION STYLES */
@@ -74,6 +75,7 @@ nav{
     border-top: 2px dotted var(--NAVY);
     /* border-bottom: 2px solid var(--NAVY); */
     background-color: var(--ALBEWHITE_FADE);
+
 }
 
 nav a{
@@ -168,7 +170,7 @@ ul a:hover{
 /* MAIN SECTION STYLES */
 
 .bookGridContainer{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: var(--space1);
     display: grid;
     grid-template-columns: 1fr;
@@ -183,6 +185,7 @@ ul a:hover{
     text-align: center;
     padding: 10px;
     height: auto;
+    background-color:rgba(255, 255, 255, 0.621);
     /* background: var(--bookBoxbg);
     background: var(--bookBoxbglg); */
     
@@ -206,6 +209,23 @@ ul a:hover{
     margin: 5px;
 }
 
+.bookBox a{
+    text-decoration: none;
+    background-color: var(--METAL);
+    padding: 6px;
+    color: var(--ALBEWHITE_FADE);
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.5s ease-in-out;
+}
+
+.bookBox a:hover{
+    background-color: var(--NEROCOLOR);
+    letter-spacing: 4px;
+}
+
 #categoriesDiv,
 #searchBarSection {
   position: static;
@@ -218,19 +238,27 @@ ul a:hover{
     display: flex;
     flex-direction: column;
     /* background-color: var(--ASHLITE); */
-    
+    justify-content: center;
     padding: 10px;
     position: static;
     width: auto;
 }
 
+#searchBarSection h2{
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+}
+
 
 
 .searchBar{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: var(--ASHLITE);
+    padding: 5px ;
 
 }
 
@@ -241,7 +269,7 @@ ul a:hover{
 
 footer{
     grid-area: 3/1/4/4;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -276,7 +304,7 @@ ROWS: header      -   main    -   footer */
     }
 
     .bookBox{
-        height: 500px;
+        height: 520px;
     }
 
     #categoriesDiv{
@@ -291,7 +319,7 @@ ROWS: header      -   main    -   footer */
     flex-direction: column;
     padding: 10px;
     position: fixed;         
-    background: var(--ALBEWHITE); /* ✅ visible background */
+    background: var(--ALBEWHITE); 
   
 }
 
