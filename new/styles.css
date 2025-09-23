@@ -1,0 +1,170 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --radius: 0.5rem;
+    --space1: 0.5rem;
+    --space2: 0.75rem;
+    --space3: 1rem;
+    --space4: 1.25rem;
+    --space5: 1.5rem;
+    --space6: 2rem;
+    
+
+    /*COLOR PALETTE */
+    --bg: #FCFAFA;
+    --text: #222222;
+    --pink: #ECCACB;
+    --gray: #3B3B3B;
+    --graywhite: #ECECEC;
+    --border: 1px dotted var(--gray);
+}
+
+*{
+    /* border: 1px solid black; */
+    margin: 0;
+}
+
+html,
+body{
+    margin: 0;
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    /* line-height: 1.5px; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "asideLeft"
+    "main"
+    "asideRight"
+    "footer";
+    min-height: 100vh;
+    gap: var(--space3);
+}
+
+/* ==== HEADER STYLES ==== */
+header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--bg);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid red;
+}
+
+header h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+/* ==== TOP NAVIGATION ==== */
+
+nav{
+    width: 30%;
+    text-transform: uppercase;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-around;
+
+    border: 2px solid red;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/* ==== ASIDE LEFT STYLES ==== */
+#asideLeft {
+    grid-area: asideLeft;
+    border: 2px solid blue;
+}
+
+/* ==== ASIDE RIGHT STYLES ==== */
+#asideRight {
+    grid-area: asideRight;
+    border: 2px solid blue;
+}
+
+/* ==== MAIN STYLES ==== */
+
+main{
+    grid-area: main;
+
+    border: 2px solid green;
+}
+
+.bookContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space3);
+
+    border: 2px solid orange;
+}
+
+
+.bookBox{
+    border: 2px solid purple;
+}
+
+.bookBox img{
+    width: 150px;
+}
+/* ==== FOOTER STYLES ==== */
+
+footer{
+    grid-area: footer;
+    text-align: center;
+
+    border: 2px solid red;
+}
+
+
+/* ==== GRID Desktop ==== */
+@media (min-width: 1024px) {
+    body{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    "asideLeft main asideRight"
+    "footer footer footer";
+    min-height: 100vh;
+    gap: var(--space3);
+}
+
+.bookContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space3);
+}
+
+/* header{
+    flex-direction: column;
+    align-items: flex-start;
+} */
+
+nav{
+    flex-wrap: wrap;
+}
+    
+}
