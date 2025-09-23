@@ -8,22 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Book<span>shop</span></h1>
+        <h1><a href="index.html"><span>Book</span>shop</h1></a>
 
         <nav>
-            <a href="">Home</a>
-            <a href="">Categories</a>
-            <a href="">Cart</a>
+            <a class="topNavLink" href="">Home</a>
+            <a class="topNavLink" href="">Categories</a>
+            <a class="topNavLink" href="">Cart</a>
         </nav>
     </header>
 
     <aside id="asideLeft">
-        ASIDE LEFT
-        <ul>
-            <li>Fantasy</li>
-            <li>Science Fiction</li>
-            <li>Dystopian</li>
-        </ul>
+        <div id="listBox">
+            <ul>
+                <li><a href="">Fantasy</a></li>
+                <li><a href="">Science Fiction</a></li>
+                <li><a href="">Dystopian</a></li>
+            </ul>
+        </div>
     </aside>
 
     <main>
@@ -265,7 +266,17 @@
         </section>
     </main>
 
-    <aside id="asideRight">ASIDE RIGHT, EXTRA CONTENT</aside>
+    <aside id="asideRight">
+        <div class="fixedSidebar">
+        <div class="searchbarBox">
+            <h2>Search</h2>
+            <div class="searchBar">
+                <input type="text" name="searchbar" id="searchbar">
+                <img src="assets/search-alt-svgrepo-com.svg" width="20px" alt="">
+            </div>
+        </div>
+    </div>
+    </aside>
 
     <footer>Copyright</footer>
 </body>

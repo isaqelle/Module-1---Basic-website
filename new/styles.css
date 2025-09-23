@@ -16,11 +16,19 @@
 
     /*COLOR PALETTE */
     --bg: #FCFAFA;
-    --text: #222222;
+    --bgtransparent: #fcfafa2c;
+    /* --text: #222222; */
     --pink: #ECCACB;
     --gray: #3B3B3B;
     --graywhite: #ECECEC;
     --border: 1px dotted var(--gray);
+
+    /* GRAY COLOR PALETTE */
+    --bgWhite: #fcfefd;
+    --bgChinaWhite: #e0e0de;
+    --text: #3c3c3a;
+    --davysGrey: #5a5a55;
+    --quickSilver: #a7a7a5;
 }
 
 *{
@@ -32,7 +40,7 @@ html,
 body{
     margin: 0;
     height: 100%;
-    background-color: var(--bg);
+    background-color: var(--bgChinaWhite);
     color: var(--text);
     font-size: 16px;
     /* line-height: 1.5px; */
@@ -43,90 +51,231 @@ body{
 body{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "header"
     "asideLeft"
+    "nav"
     "main"
     "asideRight"
     "footer";
     min-height: 100vh;
     gap: var(--space3);
+    padding-top: 80px;
 }
 
 /* ==== HEADER STYLES ==== */
 header{
     grid-area: header;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
-    background-color: var(--bg);
-    padding: 10px;
+    height: 80px;
+
+    background-color: var(--bgtransparent);
+    padding: 10px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
-    border: 2px solid red;
+    border-bottom: 1px solid gray;
 }
 
-header h1{
+header:hover{
+    background-color: var(--bg);
+}
+
+header h1,
+header h1 a{
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 55px;
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+}
+
+h1 span{
+    font-size: larger;
 }
 
 /* ==== TOP NAVIGATION ==== */
 
 nav{
-    width: 30%;
+    grid-area: nav;
     text-transform: uppercase;
     font-size: 20px;
-
     display: flex;
     justify-content: space-around;
-
     border: 2px solid red;
 }
 
-nav a{
+nav a.topNavLink{
+    position: relative;
     text-decoration: none;
+    padding: 5px 20px;
+    margin: 5px 60px;
+    color: #000;
+    font-weight: bold;
 }
+
+/* === NAVBAR LINKS EFFECT */
+
+nav a.topNavLink::after {    
+  content: "";
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+
+}
+
+nav a.topNavLink:hover::after {
+    width: 100%;
+    left:0;
+}
+
 
 /* ==== ASIDE LEFT STYLES ==== */
 #asideLeft {
     grid-area: asideLeft;
-    border: 2px solid blue;
+    background-color: var(--bgChinaWhite);
+    display: flex;
+    justify-content: center;
 }
+
+#listBox{
+    border: 2px solid orange;
+    height: 300px;
+    display: flex;
+    position: relative;
+
+    flex-direction: row;
+}
+
+#listBox ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+#listBox a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    color: #000000;
+    border: 2px solid #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    /* box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    transform: translateY(0);
+    transition: transform 160ms ease, box-shadow 160ms ease; */
+    transition: background-color 0.5s ease, color 0.5s ease,
+    box-shadow 0.5s ease, transform 0.5s ease;
+
+}
+
+#listBox a:hover{
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+
+/* @keyframes shimmer {
+    to {
+        background-position-x: 0%;
+    }
+}
+
+#listBox a:hover{
+    transform: translateY(-4px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.4);
+
+     /* SHIMMER EFFECT */
+    /* background: linear-gradient(-45deg, #000000 40%, #373737 50%, #000000 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation:  shimmer 1s  linear;
+} */ 
 
 /* ==== ASIDE RIGHT STYLES ==== */
 #asideRight {
     grid-area: asideRight;
-    border: 2px solid blue;
+    background-color: var(--bgChinaWhite);
+
+}
+
+#asideRight .searchbarBox{
+    border: 2px solid black;
+}
+
+#asideRight .searchBar{
+    border: 2px solid red;
+
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+#asideRight input{
+    width: 80%;
+}
+
+#asideRight h2{
+    text-align: center;
+}
+
+.fixedSidebar{
+    position: relative;
 }
 
 /* ==== MAIN STYLES ==== */
 
 main{
     grid-area: main;
-
     border: 2px solid green;
+    padding: var(--space4);
+}
+
+main h2{
+    text-align: center;
 }
 
 .bookContainer{
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space3);
-
     border: 2px solid orange;
 }
 
 
 .bookBox{
     border: 2px solid purple;
+    gap: 10px;
+    padding: var(--space3);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .bookBox img{
-    width: 150px;
+    width: 190px;
 }
 /* ==== FOOTER STYLES ==== */
 
@@ -142,10 +291,9 @@ footer{
 @media (min-width: 1024px) {
     body{
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-rows: 1fr auto;
     grid-template-areas: 
-    "header header header"
     "asideLeft main asideRight"
     "footer footer footer";
     min-height: 100vh;
@@ -165,6 +313,29 @@ footer{
 
 nav{
     flex-wrap: wrap;
+}
+
+.fixedSidebar{
+    position: fixed;
+    top: 10;
+    z-index: 10;
+    border: greenyellow;
+}
+
+#listBox{
+    border: 2px solid orange;
+    height: 300px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+main h2{
+    text-align:start;
+}
+
+#asideRight h2{
+    text-align: start;
 }
     
 }
