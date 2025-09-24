@@ -32,18 +32,15 @@
 }
 
 *{
-    /* border: 1px solid black; */
     margin: 0;
 }
 
 html,
 body{
-    margin: 0;
     height: 100%;
-    background-color: var(--bgChinaWhite);
+    background-color: var(--quickSilver);
     color: var(--text);
     font-size: 16px;
-    /* line-height: 1.5px; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -53,289 +50,317 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "asideLeft"
+    "header"
     "nav"
+    "asideLeft"
     "main"
     "asideRight"
     "footer";
     min-height: 100vh;
-    gap: var(--space3);
-    padding-top: 80px;
+
 }
 
-/* ==== HEADER STYLES ==== */
+
+
 header{
     grid-area: header;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    height: 80px;
-
-    background-color: var(--bgtransparent);
-    padding: 10px 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid gray;
+    padding: var(--space3);
+    background-color: var(--quickSilver);
+    border-bottom: var(--border);
+    position: relative;
 }
 
-header:hover{
-    background-color: var(--bg);
-}
-
-header h1,
 header h1 a{
-    text-transform: uppercase;
-    font-size: 55px;
+    font-size: 50px;
     text-decoration: none;
     color: #000;
+    text-transform: uppercase;
     font-style: italic;
 }
 
-h1 span{
+header h1 span{
     font-size: larger;
 }
 
-/* ==== TOP NAVIGATION ==== */
-
 nav{
-    grid-area: nav;
-    text-transform: uppercase;
-    font-size: 20px;
+    width: 40%;
     display: flex;
     justify-content: space-around;
-    border: 2px solid red;
+
+    padding: var(--space1);
 }
 
-nav a.topNavLink{
-    position: relative;
+nav a{
     text-decoration: none;
-    padding: 5px 20px;
-    margin: 5px 60px;
-    color: #000;
+    text-transform: uppercase;
     font-weight: bold;
+    font-size: 24px;
+    color: var(--text);
+
+    transition: letter-spacing 0.5s ease, text-decoration 0.5s ease;
 }
 
-/* === NAVBAR LINKS EFFECT */
-
-nav a.topNavLink::after {    
-  content: "";
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  position: absolute;
-  background: #000000;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-
+nav a:hover{
+    letter-spacing: 5px;
+    text-decoration:underline;
+    
 }
 
-nav a.topNavLink:hover::after {
-    width: 100%;
-    left:0;
-}
-
-
-/* ==== ASIDE LEFT STYLES ==== */
 #asideLeft {
     grid-area: asideLeft;
-    background-color: var(--bgChinaWhite);
-    display: flex;
-    justify-content: center;
-}
-
-#listBox{
-    border: 2px solid orange;
-    height: 300px;
-    display: flex;
-    position: relative;
-
-    flex-direction: row;
-}
-
-#listBox ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-}
-
-#listBox a{
-    display: block;
     width: 100%;
-    text-decoration: none;
-    background-color: #ffffff;
-    padding: 10px;
-    color: #000000;
-    border: 2px solid #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: var(--radius);
-    /* box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-    transform: translateY(0);
-    transition: transform 160ms ease, box-shadow 160ms ease; */
-    transition: background-color 0.5s ease, color 0.5s ease,
-    box-shadow 0.5s ease, transform 0.5s ease;
 
 }
 
-#listBox a:hover{
-    color: #fff;
-    background-color: #000;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-    transform: translateY(-2px);
-}
-
-/* @keyframes shimmer {
-    to {
-        background-position-x: 0%;
-    }
-}
-
-#listBox a:hover{
-    transform: translateY(-4px);
-    box-shadow:0 6px 14px rgba(0,0,0,0.4);
-
-     /* SHIMMER EFFECT */
-    /* background: linear-gradient(-45deg, #000000 40%, #373737 50%, #000000 60%);
-    background-size: 300%;
-    background-position-x: 100%;
-    animation:  shimmer 1s  linear;
-} */ 
-
-/* ==== ASIDE RIGHT STYLES ==== */
-#asideRight {
-    grid-area: asideRight;
-    background-color: var(--bgChinaWhite);
-
-}
-
-#asideRight .searchbarBox{
-    border: 2px solid black;
-}
-
-#asideRight .searchBar{
-    border: 2px solid red;
-
-    background-color: var(--gray);
+#asideLeft ul{
+    list-style: none;
+    padding: 0;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 5px;
+    align-items:flex-start;
+
+    margin: 0;
+    /* white-space: nowrap; */
+
 }
 
-#asideRight input{
-    width: 80%;
+#asideLeft a{
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    display: block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    /* transition: ; */
 }
 
-#asideRight h2{
-    text-align: center;
+#asideLeft a:hover{
+    background-color: white;
+    color: black;
 }
 
-.fixedSidebar{
-    position: relative;
-}
-
-/* ==== MAIN STYLES ==== */
+/* #asideLeft, main, #asideRight{
+    margin: var(--space1);
+} */
 
 main{
     grid-area: main;
-    border: 2px solid green;
     padding: var(--space4);
-}
-
-main h2{
-    text-align: center;
+    background-color: var(--graywhite);
+    height: 100%;
 }
 
 .bookContainer{
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space3);
-    border: 2px solid orange;
+    gap: var(--space6);
+    padding: var(--space3);
 }
 
-
 .bookBox{
-    border: 2px solid purple;
-    gap: 10px;
-    padding: var(--space3);
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    padding: var(--space2);
+
+    background-color: var(--bgChinaWhite);
+    border: var(--border);
+    
+}
+
+.bookBox h4,
+.bookBox p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.price{
+    background-color: white;
 }
 
 .bookBox img{
-    width: 190px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
 }
-/* ==== FOOTER STYLES ==== */
+
+.bookBox *{
+    margin: var(--space1);
+}
+
+.bookBox a{
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: var(--space1);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: background-color 0.4s ease, color 0.4s ease, letter-spacing 0.4s ease;
+
+}
+
+.bookBox a:hover{
+    background-color: white;
+    color: black;
+    letter-spacing: 10px;
+    width: 100%;
+}
+
+section h2{
+    padding: var(--space3);
+    text-transform: uppercase;
+}
+
+.bookBox h3{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#asideRight{
+    grid-area: asideRight;
+
+}
+
+.cartGrid{
+    display: grid;
+    grid-template-columns: 400px auto;
+    gap: var(--space1);
+}
+
+.cartGrid article{
+    display: flex;
+}
+
+.box{
+    background-color: #dadada;
+    padding: var(--space1);
+}
+
+.bookInfoCart{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bookInfoCart *{
+    padding: var(--space1);
+}
+
+.cartGrid img{
+    width: 160px;
+}
+
+.cartGrid a{
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    height: fit-content;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.cartGrid a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.totalPrice{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: end;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
 
 footer{
     grid-area: footer;
-    text-align: center;
-
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: var(--space5);
+    background-color: var(--gray);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
 }
+
 
 
 /* ==== GRID Desktop ==== */
 @media (min-width: 1024px) {
     body{
     display: grid;
-    grid-template-columns: 240px 1fr 240px;
+    grid-template-columns: 270px 1fr 200px;
     grid-template-rows: 1fr auto;
     grid-template-areas: 
+    "header header header"
     "asideLeft main asideRight"
     "footer footer footer";
     min-height: 100vh;
-    gap: var(--space3);
+
+    padding-top: 80px;
+    
 }
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+
 
 .bookContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space3);
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
-/* header{
+
+
+.bookBox{
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-} */
-
-nav{
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: var(--space1);
+    
 }
 
-.fixedSidebar{
-    position: fixed;
-    top: 10;
-    z-index: 10;
-    border: greenyellow;
-}
-
-#listBox{
-    border: 2px solid orange;
+#asideLeft ul{
     height: 300px;
     display: flex;
-    position: fixed;
-    z-index: 10;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+    padding-left: 40px;
+    padding-top: 10px;
+
 }
 
-main h2{
-    text-align:start;
-}
 
-#asideRight h2{
-    text-align: start;
-}
-    
+
+
 }
