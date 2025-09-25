@@ -42,6 +42,7 @@ body{
     color: var(--text);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    /* overflow-x: hidden; */
 }
 
 
@@ -57,6 +58,8 @@ body{
     "asideRight"
     "footer";
     min-height: 100vh;
+
+    padding-top: 80px;
 
 }
 
@@ -158,6 +161,7 @@ main{
     padding: var(--space4);
     background-color: var(--graywhite);
     height: 100%;
+
 }
 
 .bookContainer{
@@ -238,7 +242,8 @@ section h2{
 
 .cartGrid{
     display: grid;
-    grid-template-columns: 500px;
+    grid-template-columns: 1fr;
+    max-width: 100%;
     gap: var(--space1);
 
     border: 2px solid red;
@@ -258,13 +263,12 @@ section h2{
 
 
 
+
 .cartGrid a{
     text-decoration: none;
     color: white;
     background-color: #000;
     height: fit-content;
-    width: fit-content;
-
     padding: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -305,7 +309,7 @@ footer{
 @media (min-width: 1024px) {
     body{
     display: grid;
-    grid-template-columns: 270px 1fr 200px;
+    grid-template-columns: 270px 1fr 100px;
     grid-template-rows: 1fr auto;
     grid-template-areas: 
     "header header header"
@@ -313,7 +317,7 @@ footer{
     "footer footer footer";
     min-height: 100vh;
 
-    padding-top: 80px;
+    
     
 }
 
