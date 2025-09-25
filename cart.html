@@ -7,91 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
     <header>
-        <h1><a href="index.html"><span id="bookText">Book</span><span id="shopText">shop</span></h1></a>
+        <h1><a href="index.html"><span>Book</span>shop</h1></a>
+
         <nav>
-            <a href="index.html">Home</a>
-            <a href="cart.html">Cart</a>
-            <a href="">Categories</a>
+            <a class="topNavLink" href="index.html">Home</a>
+            <a class="topNavLink" href="">Categories</a>
+            <a class="topNavLink" href="cart.html">Cart</a>
         </nav>
     </header>
-        <aside id="asideLeft">
-            <div id="categoriesDiv">
-            <ul>
-                <li>
-                    <a href="">Fantasy</a></li>
-                <li><a href="">Science Fiction</a></li>
-                <li><a href="">Dystopian</a></li>
+
+
+    <main>
+        <section>
+            <h2>Cart (2)</h2>
+            <div class="cartGrid">
+                <article class="box">
+                    <img src="assets/1984.jpg" alt="1984 cover">
+                    <div class="bookInfoCart">
+                    <h3>1984</h3>
+                    <h4>George Orwell</h4>
+                    <p>200kr</p> </div>
+                    <div class="removeBtn">
+                    <a href="">Remove</a></div>  
                 
-            </ul>
+                </article>
+                    
+                
+                <article class="box">
+                    <img src="assets/i-who-have-never-known-men.jpg" alt="I Who Have Never Known Men cover">
+                    <div class="bookInfoCart">
+                    <h3>I Who Have Never Known Men</h3>
+                    <h4>Jacqueline Harpman</h4>
+                    <p>249kr</p></div>
+                    <div class="removeBtn">
+                    <a href="">Remove</a></div>
+                
+                </article>
+                
             </div>
-        </aside>
+            <h3 class="totalPrice">Total price:</h3>
+            <p class="totalPrice">449kr</p>
+        </section>
+        
+    </main>
 
-        <main>
-            <section id="mainBookGrid">
-                <h2>Cart (2)</h2>
-                <div class="bookGridContainerCart">
-                    <div id="cartContainer">
-                        <div class="cartBox">
-                            <img src="assets/1984.jpg" width="150px" alt="1984">
-                            <div class="cartBookInfo">
-                            <h3>1984</h3>
-                            <h4>George Orwell</h4>
-                            <h5><em>200kr</em></h5>
-                            </div>
-                            
-                        </div>
-                        <div class="cartRemove">
-                            <div class="removeButton">
-                            <img src="assets/delete-svgrepo-com-white.svg" alt="Remove icon">
-                            <p>Remove</p></div></div>
+    <aside id="asideRight">
+    </aside>
 
-                        <div class="cartBox">
-                            <img src="assets/i-who-have-never-known-men.jpg" width="150px" alt="I Who Have Never Known Men">
-                            <div class="cartBookInfo">
-                            <h3>I Who Have Never Known Men</h3>
-                            <h4>Jacqueline Harpman</h4>
-                            <h5><em>249kr</em></h5>
-                            </div>
-                            
-                        </div>
-                        <div class="cartRemove">
-                            <div class="removeButton">
-                            <img src="assets/delete-svgrepo-com-white.svg" alt="Remove icon">
-                            <p>Remove</p></div></div>
-                        
-                    </div>
-                  <section id="totalSection">
-                            <h3>Total price:</h3>
-                            <h4>449kr</h4>
-                        </section> 
-                </div>
-            </section>
-        </main>
-
-        <aside id="asideRight">
-            <div id="searchBarSection">
-                <h2>Search</h2>
-                <div class="searchBar">
-                    <input type="text" list="books"><img src="assets/search-alt-svgrepo-com.svg" width="20px" alt="Search icon">
-                    <datalist id="books">
-                        <option value="A Court of Thorns and Roses"></option>
-                        <option value="Iron flame"></option>
-                        <option value="Onyx storm"></option>
-                        <option value="Neuromancer"></option>
-                        <option value="Red Rising"></option>
-                        <option value="I Who Have Never Known Men"></option>
-                        <option value="The Handmainds Tale"></option>
-                        <option value="Brave new World"></option>
-                        <option value="1984"></option>
-                    </datalist>
-                </div>
-            </div>
-        </aside>
-
-        <footer><p>© 2025 Isabelle Dahlström</p>
+    <footer><p>© 2025 Isabelle Dahlström</p>
         <p>isabelle.dahlstromm@gmail.com</p></footer>
-        </div>
 </body>
 </html>

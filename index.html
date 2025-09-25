@@ -7,39 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
     <header>
-        <h1><a href="index.html"><span id="bookText">Book</span><span id="shopText">shop</span></h1></a>
+        <h1><a href="index.html"><span>Book</span>shop</h1></a>
+
         <nav>
-            <a href="index.html">Home</a>
-            <a href="cart.html">Cart</a>
-            <a href="">Categories</a>
+            <a class="topNavLink" href="index.html">Home</a>
+            <a class="topNavLink" href="">Categories</a>
+            <a class="topNavLink" href="cart.html">Cart</a>
         </nav>
     </header>
-        <aside id="asideLeft">
-            <div id="categoriesDiv">
+
+    <aside id="asideLeft">
+        <div id="listBox">
             <ul>
-                <li>
-                    <a href="">Fantasy</a></li>
+                <li><a href="">Fantasy</a></li>
                 <li><a href="">Science Fiction</a></li>
                 <li><a href="">Dystopian</a></li>
-                
             </ul>
-            </div>
-        </aside>
+        </div>
+    </aside>
 
-        <main>
-            <section id="mainBookGrid">
-                <h2>Available books</h2>
-                <div class="bookGridContainer">
-
-                    <!-- FANTASY BOOKS -->
+    <main>
+        <section>
+            <h2>Available books</h2>
+            <div class="bookContainer">
+                <!-- FANTASY BOOKS -->
                     <article class="bookBox">
                         <img src="assets/a-court-of-thorns-and-roses.jpg" alt="A Court of Thorns and Roses">
                         <h3>A Court of Thorns and Roses</h3>
                         <h4>Sarah J. Maas</h4>
                         <p class="summary">In A Court of Thorns and Roses, mortal huntress Feyre kills a faerie wolf and is taken to the magical land of Prythian by Tamlin, a High Fae lord cursed by dark magic. As she falls in love with him, Feyre must endure deadly trials and make heartbreaking sacrifices to break the curse and save his people.</p>
-                        <p><em>133kr</em></p>
+                        <p class="price"><em>133kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
                     <article class="bookBox">
@@ -47,7 +45,7 @@
                         <h3>Iron flame</h3>
                         <h4>Rebecca Yarros</h4>
                         <p class="summary">Violet Sorrengail begins her second year at Basgiath War College, where political intrigue, betrayals, and the rising threat of the Venin force her to test her strength, loyalty, and trust in those she loves. As the wards protecting Navarre begin to fail, she discovers devastating secrets about her dragons and Xaden’s dangerous transformation that could change everything.</p>
-                        <p><em>202kr</em></p>
+                        <p class="price"><em>202kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
                     <article class="bookBox">
@@ -55,7 +53,7 @@
                         <h3>Onyx storm</h3>
                         <h4>Rebecca Yarros</h4>
                         <p class="summary">After the shattering events of Iron Flame, Violet must rally unlikely allies and uncover ancient magics to face the growing Venin threat while racing to save Xaden from the darkness consuming him. Her journey across kingdoms reveals shocking truths, new dragon powers, and betrayals that leave the fate of her world hanging in the balance.</p>
-                        <p><em>192kr</em></p>
+                        <p class="price"><em>192kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
 
@@ -65,7 +63,7 @@
                         <h3>Neuromancer</h3>
                         <h4>William Gibson</h4>
                         <p class="summary">Washed-up hacker Case is hired by a mysterious employer to pull off a dangerous cyber-heist in a world of artificial intelligence, corporate power, and virtual reality. As he dives into cyberspace, he becomes entangled in a plot that could free a powerful AI and reshape human destiny.</p>
-                        <p><em>142kr</em></p>
+                        <p class="price"><em>142kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
                     <article class="bookBox">
@@ -73,7 +71,7 @@
                         <h3>Red Rising</h3>
                         <h4>Pierce Brown</h4>
                         <p class="summary">Darrow, a lowborn “Red” who toils in Mars’ mines, discovers that his people are enslaved under a rigid caste system controlled by the ruling “Golds.” To bring freedom, he infiltrates their elite society, rising through violence and deception to spark rebellion from within.</p>
-                        <p><em>160kr</em></p>
+                        <p class="price"><em>160kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
                     <article class="bookBox">
@@ -81,7 +79,7 @@
                         <h3>I Who Have Never Known Men</h3>
                         <h4>Jacqueline Harpman</h4>
                         <p class="summary">Thirty-nine women and one young girl are imprisoned underground without explanation, guarded by silent men. When they escape into a desolate world, the girl—who has no memories of life before captivity—becomes the last witness to humanity’s strange, quiet end.</p>
-                        <p><em>249kr</em></p>
+                        <p class="price"><em>249kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
 
@@ -91,7 +89,7 @@
                         <h3>The Handmainds Tale</h3>
                         <h4>Margaret Atwood</h4>
                         <p class="summary">In the theocratic Republic of Gilead, fertile women called Handmaids are forced to bear children for the ruling elite. Offred struggles to preserve her identity and hope for freedom as she navigates surveillance, oppression, and forbidden love.</p>
-                        <p><em>239kr</em></p>
+                        <p class="price"><em>239kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
                     <article class="bookBox">
@@ -99,7 +97,7 @@
                         <h3>Brave new World</h3>
                         <h4>Aldous Huxley</h4>
                         <p class="summary">In a future society built on genetic engineering, consumerism, and strict social conditioning, people are kept docile with pleasure and drugs. When John, a man raised outside this system, confronts its shallow values, the clash exposes the cost of a world without true freedom.</p>
-                        <p><em>269kr</em></p>
+                        <p class="price"><em>269kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
                     <article class="bookBox">
@@ -107,191 +105,171 @@
                         <h3>1984</h3>
                         <h4>George Orwell</h4>
                         <p class="summary">Winston Smith lives under a totalitarian regime where Big Brother monitors every thought and truth itself is manipulated. His secret rebellion through love and independent thought leads him into a brutal struggle that shows the terrifying reach of absolute power.</p>
-                        <p><em>200kr</em></p>
+                        <p class="price"><em>200kr</em></p>
                         <a href="cart.html">Buy</a>
                     </article>
-                </div>
-            </section>
-            <!-- SECTION: BOOKS BY PRICE -->
-            <section id="byPriceSection">
-                <h2>Books by price</h2>
-                  <div class="bookGridContainer">
-                    <article class="bookBox">
-                        <img src="assets/a-court-of-thorns-and-roses.jpg" alt="A Court of Thorns and Roses">
-                        <h3>A Court of Thorns and Roses</h3>
-                        <h4>Sarah J. Maas</h4>
-                        <p class="summary">In A Court of Thorns and Roses, mortal huntress Feyre kills a faerie wolf and is taken to the magical land of Prythian by Tamlin, a High Fae lord cursed by dark magic. As she falls in love with him, Feyre must endure deadly trials and make heartbreaking sacrifices to break the curse and save his people.</p>
-                        <p><em>133kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/neuromancer.jpg" alt="Neuromancer">
-                        <h3>Neuromancer</h3>
-                        <h4>William Gibson</h4>
-                        <p class="summary">Washed-up hacker Case is hired by a mysterious employer to pull off a dangerous cyber-heist in a world of artificial intelligence, corporate power, and virtual reality. As he dives into cyberspace, he becomes entangled in a plot that could free a powerful AI and reshape human destiny.</p>
-                        <p><em>142kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/red-rising.jpg" alt="Red Rising">
-                        <h3>Red Rising</h3>
-                        <h4>Pierce Brown</h4>
-                        <p class="summary">Darrow, a lowborn “Red” who toils in Mars’ mines, discovers that his people are enslaved under a rigid caste system controlled by the ruling “Golds.” To bring freedom, he infiltrates their elite society, rising through violence and deception to spark rebellion from within.</p>
-                        <p><em>160kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/onyx-storm.jpg" alt="Onyx storm">
-                        <h3>Onyx storm</h3>
-                        <h4>Rebecca Yarros</h4>
-                        <p class="summary">After the shattering events of Iron Flame, Violet must rally unlikely allies and uncover ancient magics to face the growing Venin threat while racing to save Xaden from the darkness consuming him. Her journey across kingdoms reveals shocking truths, new dragon powers, and betrayals that leave the fate of her world hanging in the balance.</p>
-                        <p><em>192kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/1984.jpg" alt="1984">
-                        <h3>1984</h3>
-                        <h4>George Orwell</h4>
-                        <p class="summary">Winston Smith lives under a totalitarian regime where Big Brother monitors every thought and truth itself is manipulated. His secret rebellion through love and independent thought leads him into a brutal struggle that shows the terrifying reach of absolute power.</p>
-                        <p><em>200kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/iron-flame.jpg" alt="Iron flame">
-                        <h3>Iron flame</h3>
-                        <h4>Rebecca Yarros</h4>
-                        <p class="summary">Violet Sorrengail begins her second year at Basgiath War College, where political intrigue, betrayals, and the rising threat of the Venin force her to test her strength, loyalty, and trust in those she loves. As the wards protecting Navarre begin to fail, she discovers devastating secrets about her dragons and Xaden’s dangerous transformation that could change everything.</p>
-                        <p><em>202kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/the-handmaids-tale.jpg" alt="The Handmainds Tale">
-                        <h3>The Handmainds Tale</h3>
-                        <h4>Margaret Atwood</h4>
-                        <p class="summary">In the theocratic Republic of Gilead, fertile women called Handmaids are forced to bear children for the ruling elite. Offred struggles to preserve her identity and hope for freedom as she navigates surveillance, oppression, and forbidden love.</p>
-                        <p><em>239kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/i-who-have-never-known-men.jpg" alt="I Who Have Never Known Men">
-                        <h3>I Who Have Never Known Men</h3>
-                        <h4>Jacqueline Harpman</h4>
-                        <p class="summary">Thirty-nine women and one young girl are imprisoned underground without explanation, guarded by silent men. When they escape into a desolate world, the girl—who has no memories of life before captivity—becomes the last witness to humanity’s strange, quiet end.</p>
-                        <p><em>249kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/brave-new-world.jpg" alt="Brave new World">
-                        <h3>Brave new World</h3>
-                        <h4>Aldous Huxley</h4>
-                        <p class="summary">In a future society built on genetic engineering, consumerism, and strict social conditioning, people are kept docile with pleasure and drugs. When John, a man raised outside this system, confronts its shallow values, the clash exposes the cost of a world without true freedom.</p>
-                        <p><em>269kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                </div>
-            </section>
-            <!-- SECTION: BOOKS BY AUTHOR -->
-            <section id="byAuthorSection">
-                <h2>Books by author</h2>
-                  <div class="bookGridContainer">
-                    <article class="bookBox">
-                        <img src="assets/the-handmaids-tale.jpg" alt="The Handmainds Tale">
-                        <h3>The Handmainds Tale</h3>
-                        <h4>Margaret Atwood</h4>
-                        <p class="summary">In the theocratic Republic of Gilead, fertile women called Handmaids are forced to bear children for the ruling elite. Offred struggles to preserve her identity and hope for freedom as she navigates surveillance, oppression, and forbidden love.</p>
-                        <p><em>239kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/red-rising.jpg" alt="Red Rising">
-                        <h3>Red Rising</h3>
-                        <h4>Pierce Brown</h4>
-                        <p class="summary">Darrow, a lowborn “Red” who toils in Mars’ mines, discovers that his people are enslaved under a rigid caste system controlled by the ruling “Golds.” To bring freedom, he infiltrates their elite society, rising through violence and deception to spark rebellion from within.</p>
-                        <p><em>160kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/neuromancer.jpg" alt="Neuromancer">
-                        <h3>Neuromancer</h3>
-                        <h4>William Gibson</h4>
-                        <p class="summary">Washed-up hacker Case is hired by a mysterious employer to pull off a dangerous cyber-heist in a world of artificial intelligence, corporate power, and virtual reality. As he dives into cyberspace, he becomes entangled in a plot that could free a powerful AI and reshape human destiny.</p>
-                        <p><em>142kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/i-who-have-never-known-men.jpg" alt="I Who Have Never Known Men">
-                        <h3>I Who Have Never Known Men</h3>
-                        <h4>Jacqueline Harpman</h4>
-                        <p class="summary">Thirty-nine women and one young girl are imprisoned underground without explanation, guarded by silent men. When they escape into a desolate world, the girl—who has no memories of life before captivity—becomes the last witness to humanity’s strange, quiet end.</p>
-                        <p><em>249kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/brave-new-world.jpg" alt="Brave new World">
-                        <h3>Brave new World</h3>
-                        <h4>Aldous Huxley</h4>
-                        <p class="summary">In a future society built on genetic engineering, consumerism, and strict social conditioning, people are kept docile with pleasure and drugs. When John, a man raised outside this system, confronts its shallow values, the clash exposes the cost of a world without true freedom.</p>
-                        <p><em>269kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/a-court-of-thorns-and-roses.jpg" alt="A Court of Thorns and Roses">
-                        <h3>A Court of Thorns and Roses</h3>
-                        <h4>Sarah J. Maas</h4>
-                        <p class="summary">In A Court of Thorns and Roses, mortal huntress Feyre kills a faerie wolf and is taken to the magical land of Prythian by Tamlin, a High Fae lord cursed by dark magic. As she falls in love with him, Feyre must endure deadly trials and make heartbreaking sacrifices to break the curse and save his people.</p>
-                        <p><em>133kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/1984.jpg" alt="1984">
-                        <h3>1984</h3>
-                        <h4>George Orwell</h4>
-                        <p class="summary">Winston Smith lives under a totalitarian regime where Big Brother monitors every thought and truth itself is manipulated. His secret rebellion through love and independent thought leads him into a brutal struggle that shows the terrifying reach of absolute power.</p>
-                        <p><em>200kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/iron-flame.jpg" alt="Iron flame">
-                        <h3>Iron flame</h3>
-                        <h4>Rebecca Yarros</h4>
-                        <p class="summary">Violet Sorrengail begins her second year at Basgiath War College, where political intrigue, betrayals, and the rising threat of the Venin force her to test her strength, loyalty, and trust in those she loves. As the wards protecting Navarre begin to fail, she discovers devastating secrets about her dragons and Xaden’s dangerous transformation that could change everything.</p>
-                        <p><em>202kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                    <article class="bookBox">
-                        <img src="assets/onyx-storm.jpg" alt="Onyx storm">
-                        <h3>Onyx storm</h3>
-                        <h4>Rebecca Yarros</h4>
-                        <p class="summary">After the shattering events of Iron Flame, Violet must rally unlikely allies and uncover ancient magics to face the growing Venin threat while racing to save Xaden from the darkness consuming him. Her journey across kingdoms reveals shocking truths, new dragon powers, and betrayals that leave the fate of her world hanging in the balance.</p>
-                        <p><em>192kr</em></p>
-                        <a href="cart.html">Buy</a>
-                    </article>
-                </div>
-            </section>
-        </main>
-
-        <aside id="asideRight">
-            <div id="searchBarSection">
-                <h2>Search</h2>
-                <div class="searchBar">
-                    <input type="text" list="books"><img src="assets/search-alt-svgrepo-com.svg" width="20px" alt="Search icon">
-                    <datalist id="books">
-                        <option value="A Court of Thorns and Roses"></option>
-                        <option value="Iron flame"></option>
-                        <option value="Onyx storm"></option>
-                        <option value="Neuromancer"></option>
-                        <option value="Red Rising"></option>
-                        <option value="I Who Have Never Known Men"></option>
-                        <option value="The Handmainds Tale"></option>
-                        <option value="Brave new World"></option>
-                        <option value="1984"></option>
-                    </datalist>
-                </div>
-            </div>
-        </aside>
-
-        <footer><p>© 2025 Isabelle Dahlström</p>
-        <p>isabelle.dahlstromm@gmail.com</p></footer>
         </div>
+        </section>
+        <section>
+            <h2>Books by Price</h2>
+            <div class="bookContainer">
+                 <article class="bookBox">
+                        <img src="assets/a-court-of-thorns-and-roses.jpg" alt="A Court of Thorns and Roses">
+                        <h3>A Court of Thorns and Roses</h3>
+                        <h4>Sarah J. Maas</h4>
+                        <p class="summary">In A Court of Thorns and Roses, mortal huntress Feyre kills a faerie wolf and is taken to the magical land of Prythian by Tamlin, a High Fae lord cursed by dark magic. As she falls in love with him, Feyre must endure deadly trials and make heartbreaking sacrifices to break the curse and save his people.</p>
+                        <p class="price"><em>133kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/neuromancer.jpg" alt="Neuromancer">
+                        <h3>Neuromancer</h3>
+                        <h4>William Gibson</h4>
+                        <p class="summary">Washed-up hacker Case is hired by a mysterious employer to pull off a dangerous cyber-heist in a world of artificial intelligence, corporate power, and virtual reality. As he dives into cyberspace, he becomes entangled in a plot that could free a powerful AI and reshape human destiny.</p>
+                        <p class="price"><em>142kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/red-rising.jpg" alt="Red Rising">
+                        <h3>Red Rising</h3>
+                        <h4>Pierce Brown</h4>
+                        <p class="summary">Darrow, a lowborn “Red” who toils in Mars’ mines, discovers that his people are enslaved under a rigid caste system controlled by the ruling “Golds.” To bring freedom, he infiltrates their elite society, rising through violence and deception to spark rebellion from within.</p>
+                        <p class="price"><em>160kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/onyx-storm.jpg" alt="Onyx storm">
+                        <h3>Onyx storm</h3>
+                        <h4>Rebecca Yarros</h4>
+                        <p class="summary">After the shattering events of Iron Flame, Violet must rally unlikely allies and uncover ancient magics to face the growing Venin threat while racing to save Xaden from the darkness consuming him. Her journey across kingdoms reveals shocking truths, new dragon powers, and betrayals that leave the fate of her world hanging in the balance.</p>
+                        <p class="price"><em>192kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/1984.jpg" alt="1984">
+                        <h3>1984</h3>
+                        <h4>George Orwell</h4>
+                        <p class="summary">Winston Smith lives under a totalitarian regime where Big Brother monitors every thought and truth itself is manipulated. His secret rebellion through love and independent thought leads him into a brutal struggle that shows the terrifying reach of absolute power.</p>
+                        <p class="price"><em>200kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/iron-flame.jpg" alt="Iron flame">
+                        <h3>Iron flame</h3>
+                        <h4>Rebecca Yarros</h4>
+                        <p class="summary">Violet Sorrengail begins her second year at Basgiath War College, where political intrigue, betrayals, and the rising threat of the Venin force her to test her strength, loyalty, and trust in those she loves. As the wards protecting Navarre begin to fail, she discovers devastating secrets about her dragons and Xaden’s dangerous transformation that could change everything.</p>
+                        <p class="price"><em>202kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/the-handmaids-tale.jpg" alt="The Handmainds Tale">
+                        <h3>The Handmainds Tale</h3>
+                        <h4>Margaret Atwood</h4>
+                        <p class="summary">In the theocratic Republic of Gilead, fertile women called Handmaids are forced to bear children for the ruling elite. Offred struggles to preserve her identity and hope for freedom as she navigates surveillance, oppression, and forbidden love.</p>
+                        <p class="price"><em>239kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/i-who-have-never-known-men.jpg" alt="I Who Have Never Known Men">
+                        <h3>I Who Have Never Known Men</h3>
+                        <h4>Jacqueline Harpman</h4>
+                        <p class="summary">Thirty-nine women and one young girl are imprisoned underground without explanation, guarded by silent men. When they escape into a desolate world, the girl—who has no memories of life before captivity—becomes the last witness to humanity’s strange, quiet end.</p>
+                        <p class="price"><em>249kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/brave-new-world.jpg" alt="Brave new World">
+                        <h3>Brave new World</h3>
+                        <h4>Aldous Huxley</h4>
+                        <p class="summary">In a future society built on genetic engineering, consumerism, and strict social conditioning, people are kept docile with pleasure and drugs. When John, a man raised outside this system, confronts its shallow values, the clash exposes the cost of a world without true freedom.</p>
+                        <p class="price"><em>269kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+        </div>
+        </section>
+        <section>
+            <h2>Books by Author</h2>
+            <div class="bookContainer">
+                <article class="bookBox">
+                        <img src="assets/the-handmaids-tale.jpg" alt="The Handmainds Tale">
+                        <h3>The Handmainds Tale</h3>
+                        <h4>Margaret Atwood</h4>
+                        <p class="summary">In the theocratic Republic of Gilead, fertile women called Handmaids are forced to bear children for the ruling elite. Offred struggles to preserve her identity and hope for freedom as she navigates surveillance, oppression, and forbidden love.</p>
+                        <p class="price"><em>239kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/red-rising.jpg" alt="Red Rising">
+                        <h3>Red Rising</h3>
+                        <h4>Pierce Brown</h4>
+                        <p class="summary">Darrow, a lowborn “Red” who toils in Mars’ mines, discovers that his people are enslaved under a rigid caste system controlled by the ruling “Golds.” To bring freedom, he infiltrates their elite society, rising through violence and deception to spark rebellion from within.</p>
+                        <p class="price"><em>160kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/neuromancer.jpg" alt="Neuromancer">
+                        <h3>Neuromancer</h3>
+                        <h4>William Gibson</h4>
+                        <p class="summary">Washed-up hacker Case is hired by a mysterious employer to pull off a dangerous cyber-heist in a world of artificial intelligence, corporate power, and virtual reality. As he dives into cyberspace, he becomes entangled in a plot that could free a powerful AI and reshape human destiny.</p>
+                        <p class="price"><em>142kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/i-who-have-never-known-men.jpg" alt="I Who Have Never Known Men">
+                        <h3>I Who Have Never Known Men</h3>
+                        <h4>Jacqueline Harpman</h4>
+                        <p class="summary">Thirty-nine women and one young girl are imprisoned underground without explanation, guarded by silent men. When they escape into a desolate world, the girl—who has no memories of life before captivity—becomes the last witness to humanity’s strange, quiet end.</p>
+                        <p class="price"><em>249kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/brave-new-world.jpg" alt="Brave new World">
+                        <h3>Brave new World</h3>
+                        <h4>Aldous Huxley</h4>
+                        <p class="summary">In a future society built on genetic engineering, consumerism, and strict social conditioning, people are kept docile with pleasure and drugs. When John, a man raised outside this system, confronts its shallow values, the clash exposes the cost of a world without true freedom.</p>
+                        <p class="price"><em>269kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/a-court-of-thorns-and-roses.jpg" alt="A Court of Thorns and Roses">
+                        <h3>A Court of Thorns and Roses</h3>
+                        <h4>Sarah J. Maas</h4>
+                        <p class="summary">In A Court of Thorns and Roses, mortal huntress Feyre kills a faerie wolf and is taken to the magical land of Prythian by Tamlin, a High Fae lord cursed by dark magic. As she falls in love with him, Feyre must endure deadly trials and make heartbreaking sacrifices to break the curse and save his people.</p>
+                        <p class="price"><em>133kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/1984.jpg" alt="1984">
+                        <h3>1984</h3>
+                        <h4>George Orwell</h4>
+                        <p class="summary">Winston Smith lives under a totalitarian regime where Big Brother monitors every thought and truth itself is manipulated. His secret rebellion through love and independent thought leads him into a brutal struggle that shows the terrifying reach of absolute power.</p>
+                        <p class="price"><em>200kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/iron-flame.jpg" alt="Iron flame">
+                        <h3>Iron flame</h3>
+                        <h4>Rebecca Yarros</h4>
+                        <p class="summary">Violet Sorrengail begins her second year at Basgiath War College, where political intrigue, betrayals, and the rising threat of the Venin force her to test her strength, loyalty, and trust in those she loves. As the wards protecting Navarre begin to fail, she discovers devastating secrets about her dragons and Xaden’s dangerous transformation that could change everything.</p>
+                        <p class="price"><em>202kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+                    <article class="bookBox">
+                        <img src="assets/onyx-storm.jpg" alt="Onyx storm">
+                        <h3>Onyx storm</h3>
+                        <h4>Rebecca Yarros</h4>
+                        <p class="summary">After the shattering events of Iron Flame, Violet must rally unlikely allies and uncover ancient magics to face the growing Venin threat while racing to save Xaden from the darkness consuming him. Her journey across kingdoms reveals shocking truths, new dragon powers, and betrayals that leave the fate of her world hanging in the balance.</p>
+                        <p class="price"><em>192kr</em></p>
+                        <a href="cart.html">Buy</a>
+                    </article>
+        </div>
+        </section>
+    </main>
+
+    <aside id="asideRight">
+    </aside>
+
+    <footer><p>© 2025 Isabelle Dahlström</p>
+        <p>isabelle.dahlstromm@gmail.com</p></footer>
 </body>
 </html>
