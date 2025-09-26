@@ -38,11 +38,10 @@
 html,
 body{
     height: 100%;
-    background-color: var(--quickSilver);
+    background-color: var(--bgChinaWhite);
     color: var(--text);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    /* overflow-x: hidden; */
 }
 
 
@@ -58,23 +57,21 @@ body{
     "asideRight"
     "footer";
     min-height: 100vh;
-
-    padding-top: 80px;
-
 }
 
-
+/* #### HEADER STYLES #### */
 
 header{
     grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     padding: var(--space3);
     background-color: var(--quickSilver);
     border-bottom: var(--border);
-    position: relative;
+    
 }
 
 header h1 a{
@@ -89,11 +86,12 @@ header h1 span{
     font-size: larger;
 }
 
+/* #### HEADER NAVIGATION STYLES #### */
+
 nav{
     width: 40%;
     display: flex;
     justify-content: space-around;
-
     padding: var(--space1);
 }
 
@@ -113,24 +111,22 @@ nav a:hover{
     
 }
 
+/* --------------------------- */
+/* #### ASIDE LEFT STYLES #### */
+/* --------------------------- */
+
 #asideLeft {
     grid-area: asideLeft;
-    width: 100%;
-
 }
 
 #asideLeft ul{
     list-style: none;
     padding: 0;
-    height: auto;
+    height: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items:flex-start;
-
-    margin: 0;
-    /* white-space: nowrap; */
-
+    align-items: center;
 }
 
 #asideLeft a{
@@ -142,9 +138,8 @@ nav a:hover{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
-transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%;
-    /* transition: ; */
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #asideLeft a:hover{
@@ -152,16 +147,14 @@ transition: background-color 0.3s ease, color 0.3s ease;
     color: black;
 }
 
-/* #asideLeft, main, #asideRight{
-    margin: var(--space1);
-} */
+/* ----------------------------- */
+/* #### MAIN SECTION STYLES #### */
+/* ----------------------------- */
 
 main{
     grid-area: main;
     padding: var(--space4);
     background-color: var(--graywhite);
-    height: 100%;
-
 }
 
 .bookContainer{
@@ -177,17 +170,31 @@ main{
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: var(--space2);
 
     background-color: var(--bgChinaWhite);
     border: var(--border);
     
 }
 
-.bookBox h4,
-.bookBox p {
+
+
+.bookBox h3,
+.bookBox h4{
     font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
 }
+
+
+.bookBox .summary{
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.imgWrapper{
+    background-color: black;
+    width: 100%;
+}
+
 
 .price{
     background-color: white;
@@ -235,60 +242,85 @@ section h2{
     text-transform: uppercase;
 }
 
+/* ---------------------------- */
+/* #### ASIDE RIGHT STYLES #### */
+/* ---------------------------- */
+
 #asideRight{
     grid-area: asideRight;
-
 }
+
+
+/* --------------------- */
+/* #### CART STYLES #### */
+/* --------------------- */
 
 .cartGrid{
     display: grid;
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    gap: var(--space1);
-
-    border: 2px solid red;
+    grid-template-rows: 1fr 1fr;
+    width: 60%;
+    gap: 10px;
 }
 
-.box{
+.cartGrid > div{
+    background-color: white;
+}
+
+.cartGrid  img{
+    width: 8rem;
+    
+}
+
+.cartInfo{
+    padding: 10px;
+}
+
+.bookInfoBox{
     display: flex;
     flex-direction: row;
-    background-color: #dadada;
-    padding: var(--space1);
-    border: 2px solid black;
 }
 
-.box img{
-    width: 150px;
+.cartWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 20px;
+    padding-left: 10px;
+    width: 100%;
 }
 
 
+.removeBtn{
+    display: flex;
+}
 
-
-.cartGrid a{
-    text-decoration: none;
+.removeBtn a{
     color: white;
-    background-color: #000;
-    height: fit-content;
-    padding: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    text-decoration: none;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
-.cartGrid a:hover{
-    background-color: #fff;
-    color: #000;
+.removeBtn img{
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.removeBtn a:hover img{
+    transform: rotate(180deg);
 }
 
 .totalPrice{
-    font-family: 'Courier New', Courier, monospace;
-    text-align: end;
-    font-weight: bolder;
-    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
-
+/* ----------------------- */
+/* #### FOOTER STYLES #### */
+/* ----------------------- */
 
 footer{
     grid-area: footer;
@@ -304,19 +336,21 @@ footer{
 }
 
 
+/* --------------------------- */
+/* ===== GRID > 1024px ======= */
+/* --------------------------- */
 
-/* ==== GRID Desktop ==== */
 @media (min-width: 1024px) {
     body{
     display: grid;
-    grid-template-columns: 270px 1fr 100px;
+    grid-template-columns: 270px auto 200px;
     grid-template-rows: 1fr auto;
     grid-template-areas: 
     "header header header"
     "asideLeft main asideRight"
     "footer footer footer";
     min-height: 100vh;
-
+    padding-top: 80px;
     
     
 }

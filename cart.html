@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+     <!-- === HEADER SECTION === -->
     <header>
         <h1><a href="index.html"><span>Book</span>shop</h1></a>
 
@@ -17,44 +18,51 @@
         </nav>
     </header>
 
+     <!-- === MAIN SECTION === -->
 
     <main>
         <section>
             <h2>Cart (2)</h2>
             <div class="cartGrid">
-                <article class="box">
-                    <img src="assets/1984.jpg" alt="1984 cover">
-                    <div class="bookInfoCart">
+                <div class="bookInfoBox box">
+                    <img class="bookCoverimg" src="assets/1984.jpg" alt="1984 Book Cover">
+                    <div class="cartWrapper">
+                        <div class="cartInfo">
                     <h3>1984</h3>
                     <h4>George Orwell</h4>
-                    <p>200kr</p> </div>
-                    <div class="removeBtn">
-                    <a href="">Remove</a></div>  
-                
-                </article>
-                    
-                
-                <article class="box">
-                    <img src="assets/i-who-have-never-known-men.jpg" alt="I Who Have Never Known Men cover">
-                    <div class="bookInfoCart">
-                    <h3>I Who Have Never Known Men</h3>
-                    <h4>Jacqueline Harpman</h4>
-                    <p>249kr</p></div>
-                    <div class="removeBtn">
-                    <a href="">Remove</a></div>
-                
-                </article>
-                
+                    <h5>200kr</h5>
+                    <h6>Quantity: 1</h6></div>
+                <div class="removeBtn"><a href="">
+                    <img src="assets/round-delete-button-svgrepo-com.svg" alt="Delete icon">
+                </a></div></div>
+                </div>
+                <div class="bookInfoBox box">
+                    <img class="bookCoverimg" src="assets/i-who-have-never-known-men.jpg" alt="I Wo Have Never Known Men Book Cover">
+                    <div class="cartWrapper">
+                        <div class="cartInfo">
+                        <h3>I Who Have Never Known Men</h3>
+                        <h4>Jacqueline Harpman</h4>
+                        <h5>249kr</h5>
+                    <h6>Quantity: 1</h6></div>
+                    <div class="removeBtn"><a href="">
+                        <img src="assets/round-delete-button-svgrepo-com.svg" alt="Delete icon">
+                    </a></div>
+                </div>
+                </div>
             </div>
-            <h3 class="totalPrice">Total price:</h3>
-            <p class="totalPrice">449kr</p>
+            <div class="totalPrice">
+            <h3>Total Price:</h3>
+            <h4>449kr</h4>
+        </div>
         </section>
         
     </main>
 
+     <!-- === ASIDE RIGHT SECTION === -->
     <aside id="asideRight">
     </aside>
 
+     <!-- === FOOTER SECTION === -->
     <footer><p>© 2025 Isabelle Dahlström</p>
         <p>isabelle.dahlstromm@gmail.com</p></footer>
 </body>
