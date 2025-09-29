@@ -6,6 +6,7 @@
 
 :root{
     --radius: 0.5rem;
+
     --space1: 0.5rem;
     --space2: 0.75rem;
     --space3: 1rem;
@@ -16,19 +17,12 @@
 
     /*COLOR PALETTE */
     --bg: #FCFAFA;
-    --bgtransparent: #fcfafa2c;
-    /* --text: #222222; */
-    --pink: #ECCACB;
-    --gray: #3B3B3B;
-    --graywhite: #ECECEC;
-    --border: 1px dotted var(--gray);
-
-    /* GRAY COLOR PALETTE */
-    --bgWhite: #fcfefd;
-    --bgChinaWhite: #e0e0de;
-    --text: #3c3c3a;
-    --davysGrey: #5a5a55;
-    --quickSilver: #a7a7a5;
+    --fg: #312f2c;
+    --jadeGreen: #abd1c6;
+    --darkGreen: #004643;
+    --sand: #f0ede5;
+    --shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    --border: 1px dotted var(--darkGreen);
 }
 
 *{
@@ -38,8 +32,8 @@
 html,
 body{
     height: 100%;
-    background-color: var(--bgChinaWhite);
-    color: var(--text);
+    background-color: var(--jadeGreen);
+    color: var(--fg);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -69,8 +63,8 @@ header{
     position: relative;
 
     padding: var(--space3);
-    background-color: var(--quickSilver);
-    border-bottom: var(--border);
+    background-color: var(--jadeGreen);
+    border-bottom: 1px dotted var(--darkGreen);
     
 }
 
@@ -82,8 +76,29 @@ header h1 a{
     font-style: italic;
 }
 
-header h1 span{
+header h1 .book{
     font-size: larger;
+}
+
+/* #### ANIMATION TITLE #### */
+
+.bounce{
+    display: inline-block;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    20% {transform: translateY(-20px);}
+    40% {transform: translateY(0);}
+    100% {transform: translateY(0);}
+}
+
+.book{
+    animation: bounce 0.6s ease-out 0s 1;
+}
+.shop{
+    animation:  bounce 0.6s ease-out 0.6s 1;
+    color: var(--darkGreen);
 }
 
 /* #### HEADER NAVIGATION STYLES #### */
@@ -117,6 +132,7 @@ nav a:hover{
 
 #asideLeft {
     grid-area: asideLeft;
+    background-color: var(--jadeGreen);
 }
 
 #asideLeft ul{
@@ -154,7 +170,7 @@ nav a:hover{
 main{
     grid-area: main;
     padding: var(--space4);
-    background-color: var(--graywhite);
+    background-color: var(--bg);
 }
 
 .bookContainer{
@@ -171,7 +187,7 @@ main{
     justify-content: space-between;
     text-align: center;
 
-    background-color: var(--bgChinaWhite);
+    background-color:var(--sand);
     border: var(--border);
     
 }
@@ -190,20 +206,20 @@ main{
     font-size: 14px;
 }
 
-.imgWrapper{
-    background-color: black;
-    width: 100%;
-}
+
 
 
 .price{
     background-color: white;
+    font-weight: bold;
 }
 
 .bookBox img{
     width: 200px;
     height: 300px;
     object-fit: cover;
+    box-shadow:
+  0px 0px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 .bookBox *{
@@ -235,6 +251,8 @@ main{
 section h2{
     padding: var(--space3);
     text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
 }
 
 .bookBox h3{
@@ -248,6 +266,7 @@ section h2{
 
 #asideRight{
     grid-area: asideRight;
+    background-color: var(--jadeGreen);
 }
 
 
@@ -257,18 +276,20 @@ section h2{
 
 .cartGrid{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto;
     width: 60%;
     gap: 10px;
+    background-color: var(--bg);
 }
 
 .cartGrid > div{
     background-color: white;
+    box-shadow: var(--shadow);   
 }
 
 .cartGrid  img{
     width: 8rem;
-    
 }
 
 .cartInfo{
@@ -297,7 +318,7 @@ section h2{
 .removeBtn a{
     color: white;
     text-decoration: none;
-    background-color: black;
+    background-color: var(--darkGreen);
     display: flex;
     align-items: center;
     padding: 20px;
@@ -316,6 +337,10 @@ section h2{
     display: flex;
     flex-direction: column;
     align-items: end;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
 }
 
 /* ----------------------- */
@@ -329,7 +354,8 @@ footer{
     align-items: center;
     height: auto;
     padding: var(--space5);
-    background-color: var(--gray);
+    
+    background-color: var(--fg);
     color: white;
     font-family: 'Courier New', Courier, monospace;
     
