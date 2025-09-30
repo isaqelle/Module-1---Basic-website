@@ -1,76 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookshop</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Bookshop Cart</title>
+	<link href="styles.css" rel="stylesheet">
 </head>
 <body>
-     <!-- === HEADER SECTION === -->
-    <header>
-        <h1><a href="index.html"><span class="bounce book">Book</span><span class="bounce shop">shop</span></h1></a>
-
-        <nav>
-            <a class="topNavLink" href="index.html">Home</a>
-            <a class="topNavLink" href="">Categories</a>
-            <a class="topNavLink" href="cart.html">Cart</a>
-        </nav>
-    </header>
+	<!-- === HEADER SECTION === -->
+	<header>
+		<h1><a href="index.html"><span class="bounce book">Book</span><span class="bounce shop">shop</span></a></h1>
+		<nav>
+			<a class="topNavLink" href="index.html">Home</a> <a class="topNavLink" href="">Categories</a> <a class="topNavLink" href="cart.html">Cart</a>
+		</nav>
+	</header>
 
     <!-- === ASIDE LEFT SECTION === -->
+	<aside id="asideLeft"></aside>
+    
+    <!-- === MAIN SECTION === -->
+	<main>
+		<section>
+			<h2>Cart (2)</h2>
+			<div class="cartGrid">
+				<div class="cartItem">
+					<div class="cartWrapper">
+						<img alt="I Who Have Never Known Men Book Cover" src="assets/i-who-have-never-known-men.jpg">
+						<div class="cartDetails">
+							<h3>I Who Have Never Known Men</h3>
+							<h4>Jacqueline Harpman</h4>
+							<h5>249kr</h5>
+							<h6>Quantity: 1</h6>
+						</div>
+					</div>
+				</div>
+				<div class="cartItem">
+					<div class="removeButton">
+						<a href=""><img alt="Remove logo" src="assets/round-delete-button-svgrepo-com.svg"></a>
+					</div>
+				</div>
+				<div class="cartItem">
+					<div class="cartWrapper">
+						<img alt="1984 Book Cover" src="assets/1984.jpg">
+						<div class="cartDetails">
+							<h3>1984</h3>
+							<h4>George Orwell</h4>
+							<h5>200kr</h5>
+							<h6>Quantity: 1</h6>
+						</div>
+					</div>
+				</div>
+				<div class="cartItem">
+					<div class="removeButton">
+						<a href=""><img alt="Remove logo" src="assets/round-delete-button-svgrepo-com.svg"></a>
+					</div>
+				</div>
+			</div>
+			<div class="totalPrice">
+				<h3>Total Price:</h3>
+				<h4>449kr</h4>
+			</div>
+		</section>
+	</main>
 
-     <aside id="asideLeft"> </aside>
+    <!-- === ASIDE RIGHT SECTION === -->
+	<aside id="asideRight"></aside>
 
-     <!-- === MAIN SECTION === -->
-
-    <main>
-        <section>
-            <h2>Cart (2)</h2>
-           
-        <div class="cartGrid">
-                <div class="bookInfoBox box">
-                    <img class="bookCoverimg" src="assets/1984.jpg" alt="1984 Book Cover">
-                    <div class="cartWrapper">
-                        <div class="cartInfo">
-                    <h3>1984</h3>
-                    <h4>George Orwell</h4>
-                    <h5>200kr</h5>
-                    <h6>Quantity: 1</h6></div>
-                <div class="removeBtn"><a href="">
-                    <img src="assets/round-delete-button-svgrepo-com.svg" alt="Delete icon">
-                </a></div></div>
-                </div>
-                <div class="bookInfoBox box">
-                    <img class="bookCoverimg" src="assets/i-who-have-never-known-men.jpg" alt="I Wo Have Never Known Men Book Cover">
-                    <div class="cartWrapper">
-                        <div class="cartInfo">
-                        <h3>I Who Have Never Known Men</h3>
-                        <h4>Jacqueline Harpman</h4>
-                        <h5>249kr</h5>
-                    <h6>Quantity: 1</h6></div>
-                    <div class="removeBtn"><a href="">
-                        <img src="assets/round-delete-button-svgrepo-com.svg" alt="Delete icon">
-                    </a></div>
-                </div>
-                </div>
-            </div>
-            <div class="totalPrice">
-            <h3>Total Price:</h3>
-            <h4>449kr</h4>
-        </div>
-        </section>
-            
-        
-        
-    </main>
-
-     <!-- === ASIDE RIGHT SECTION === -->
-    <aside id="asideRight">
-    </aside>
-
-     <!-- === FOOTER SECTION === -->
-    <footer><p>© 2025 Isabelle Dahlström</p>
-        <p>isabelle.dahlstromm@gmail.com</p></footer>
+    <!-- === FOOTER SECTION === -->
+	<footer>
+		<p>&copy; 2025 Isabelle Dahlström</p>
+		<p>isabelle.dahlstromm@gmail.com</p>
+	</footer>
 </body>
 </html>

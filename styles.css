@@ -113,6 +113,7 @@ nav{
     display: flex;
     justify-content: space-around;
     padding: var(--space1);
+    flex-wrap: wrap;
 }
 
 nav a{
@@ -287,73 +288,81 @@ section h2{
 /* #### CART STYLES #### */
 /* --------------------- */
 
-.cartGrid{
+
+.cartGrid {
     display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: auto;
-    width: 60%;
-    gap: 10px;
-    background-color: var(--bg);
+    grid-template-columns: 1fr 100px;
+    width: 100%;
+    row-gap: 20px;
 }
 
-.cartGrid > div{
-    background-color: white;
-    box-shadow: var(--shadow);   
-}
-
-.cartGrid  img{
-    width: 8rem;
-}
-
-.cartInfo{
-    padding: 10px;
-}
-
-.bookInfoBox{
-    display: flex;
-    flex-direction: row;
-}
-
-.cartWrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    line-height: 20px;
-    padding-left: 10px;
+.cartItem{
+    border: 1px solid var(--darkGreen);
+    background-color: var(--sand);
     width: 100%;
 }
 
 
-.removeBtn{
-    display: flex;
+.cartItem img{
+    max-width: 150px;
+    width: 100%;
+    
 }
 
-.removeBtn a{
+
+.removeButton{
+    background-color: var(--darkGreen);
+    height: 100%;
+    width: 100%;
+}
+
+.removeButton a{
     color: white;
     text-decoration: none;
-    background-color: var(--darkGreen);
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-.removeBtn img{
-    width: 20px;
+
+
+.removeButton img{
+    width: 25px;
     transition: transform 0.3s ease;
 }
 
-.removeBtn a:hover img{
+.removeButton a:hover img{
     transform: rotate(180deg);
+}
+
+
+.cartWrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.cartDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    line-height: 30px;
+    font-size: large;
 }
 
 .totalPrice{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: end;
+    margin-top: 20px;
+}
 
+.totalPrice h3{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: larger;
+    font-size: 20px;
 }
 
 /* ----------------------- */
@@ -433,3 +442,4 @@ header{
 }
 
 }
+
